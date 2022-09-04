@@ -1,3 +1,33 @@
 .footer {
   flex: 0 0 auto;
+  margin: auto;
+
+  &-menu {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 16px 32px;
+    &-item {
+      color: #fff;
+      border-bottom: 2px solid #181818;
+      white-space: nowrap;
+      width: fit-content;
+      padding-bottom: 15px;
+    }
+  }
+  &-logo {
+    display: flex;
+    justify-content: center;
+
+    height: 91px;
+    padding-top: 21px;
+    border-top: 3px solid #3b3b3b;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 100%;
+    text-transform: uppercase;
+    background: linear-gradient(132.75deg, #f65130 1.86%, #e9941a 95.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }
