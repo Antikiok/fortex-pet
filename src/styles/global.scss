@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Montserrat Flex, sans-serif;
+}
+
+html {
+  height: 100%;
+}
+body {
+  background-color: #181818;
+  color: #fff;
+  height: inherit;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+#__next {
+  height: inherit;
+}
