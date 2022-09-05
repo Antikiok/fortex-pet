@@ -9,7 +9,7 @@ html {
   height: 100%;
 }
 body {
-  background-color: #181818;
+  background-color: #1a1a1a;
   color: #fff;
   height: inherit;
 }
@@ -20,4 +20,12 @@ a {
 }
 #__next {
   height: inherit;
+}
+
+button {
+  border-width: 0px;
+}
+
+input {
+  border-width: 0px;
 }

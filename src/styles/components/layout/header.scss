@@ -46,12 +46,18 @@
 .header_second {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 100%;
   &-menu {
     display: flex;
+    height: inherit;
     gap: 30px;
     &-item {
+      display: flex;
+      align-items: center;
+      height: inherit;
       color: #fff;
-      padding-bottom: 15px;
+
       border-bottom: 2px solid #181818;
 
       &:hover {
@@ -61,5 +67,21 @@
   }
   &-rightside {
     display: flex;
+    column-gap: 10px;
+    align-items: center;
+  }
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 41px;
+    width: 41px;
+    border-radius: 50%;
+    border: 0px;
+    background: #131313;
+    cursor: pointer;
+  }
+  &-basket-value {
+    width: 70px;
   }
 }
