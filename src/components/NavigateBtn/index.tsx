@@ -1,4 +1,4 @@
-import { INavigateBtn } from 'interfaces/components/navigateBtn.interface';
+import { INavigateBtn } from 'interfaces/components.interface';
 
 const NavigateBtn = ({ text, onClick }: INavigateBtn) => {
   return (

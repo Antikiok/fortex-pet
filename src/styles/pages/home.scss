@@ -76,3 +76,35 @@
     border-left: 2px solid #f65130;
   }
 }
+
+.home_instruction {
+  display: flex;
+  column-gap: 15px;
+
+  &-icon {
+    flex-shrink: 0;
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 25px;
+  }
+  &-heading {
+    font-weight: 700;
+    font-size: 36px;
+  }
+  &-text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+}
+
+.home_gallery {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  margin-top: 50px;
+}

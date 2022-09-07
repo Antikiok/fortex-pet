@@ -1,0 +1,71 @@
+.product_gallery {
+  &-heading {
+    margin-bottom: 35px;
+    max-width: 1170px;
+    font-weight: 700;
+    font-size: 24px;
+  }
+  &-carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  &-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #181818;
+  }
+  &-circle {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin: 35px 0;
+    &-item {
+      width: 16px;
+      height: 16px;
+      background: #232323;
+      border-radius: 50%;
+      color: #fff;
+      cursor: pointer;
+      &:hover {
+        background: #f36f37;
+        box-shadow: 0px 0px 10px rgba(243, 111, 55, 0.4);
+      }
+    }
+  }
+}
+
+.product_gallery_item {
+  background: #181818;
+  border-radius: 5px;
+  padding: 25px;
+  margin: 0 25px;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    flex-shrink: 0;
+  }
+
+  &-cells {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    &-text {
+      display: flex;
+      align-items: center;
+    }
+    &-biletos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+      width: 60px;
+      background: #131313;
+    }
+  }
+  &-image {
+  }
+}

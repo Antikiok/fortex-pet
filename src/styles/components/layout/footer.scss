@@ -1,6 +1,7 @@
 .footer {
   flex: 0 0 auto;
   margin: auto;
+  padding-top: 25px;
 
   &-menu {
     display: grid;
@@ -17,9 +18,9 @@
   &-logo {
     display: flex;
     justify-content: center;
-
     height: 91px;
     padding-top: 21px;
+    padding-bottom: 40px;
     border-top: 3px solid #3b3b3b;
     font-weight: 800;
     font-size: 30px;
