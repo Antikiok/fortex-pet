@@ -1,0 +1,25 @@
+.search_box {
+  display: flex;
+  height: 37px;
+  background: #282828;
+  border-radius: 5px;
+  column-gap: 5px;
+
+  &-input {
+    background: #282828;
+
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: inherit;
+
+    color: #fff;
+    padding-left: 5px;
+  }
+  &-btn {
+    height: inherit;
+    width: 55px;
+    background: linear-gradient(132.75deg, #f65130 1.86%, #e9941a 95.96%);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}

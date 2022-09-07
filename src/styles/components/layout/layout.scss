@@ -7,7 +7,14 @@
 
 .content {
   flex: 1 0 auto;
-  max-width: 1170px;
   width: 100%;
+  background-image: url(../../../../public/static/images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.page {
+  padding-top: 155px;
+  padding-bottom: 80px;
+  max-width: 1170px;
   margin: auto;
 }
