@@ -20,9 +20,18 @@ interface IProductGalleryCircle {
   page: number;
   setPage: (index: number) => void;
 }
+interface ILeftArrowBtn {
+  page: number;
+  setPage: (index: number) => void;
+}
+interface IRightArrowBtn extends ILeftArrowBtn {
+  totalPages: number;
+}
 
 export {
   type INavigateBtn,
   type IProductGalleryItem,
-  type IProductGalleryCircle
+  type IProductGalleryCircle,
+  type ILeftArrowBtn,
+  type IRightArrowBtn
 };

@@ -20,9 +20,7 @@ const ProductGalleryCircle = ({
               key={index}
               onClick={() => tooglePage(index)}
               style={{ backgroundColor: page === index ? '#f36f37' : '' }}
-            >
-              {index + 1}
-            </button>
+            ></button>
           );
         })}
       </div>

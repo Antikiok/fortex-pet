@@ -4,6 +4,7 @@ import Profit from 'assets/icons/Profit';
 
 import NavigateBtn from 'components/NavigateBtn';
 import ProductGallery from 'components/ProductGallery';
+import WinnersGallery from 'components/WinnersGallery';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -103,7 +104,21 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className="home_gallery">
-        <ProductGallery arrToRender={galleryToRender} />
+        <ProductGallery
+          arrToRender={galleryToRender}
+          heading="Самые дешевые аукционы"
+        />
+      </div>
+
+      <div className="home_winners">
+        <WinnersGallery arrToRender={winnersToRender} />
+      </div>
+
+      <div className="home_gallery">
+        <ProductGallery
+          arrToRender={galleryToRender}
+          heading="Популярные аукционы"
+        />
       </div>
     </section>
   );
@@ -353,5 +368,228 @@ const galleryToRender = [
     productName: 'Товар 22',
     countBiletos: '19/100',
     article: 'Art:000168'
+  }
+];
+
+const winnersToRender = [
+  {
+    firstName: 'Viezh',
+    secondName: 'Robert',
+    nickname: 'Andreyko235',
+    profileImage: {
+      src: '/static/images/Avatar175.png',
+      alt: 'AvatarImage',
+      height: 50,
+      width: 50
+    },
+    productImage: {
+      src: '/static/images/productImgae.png',
+      alt: 'ProductImage',
+      height: 220,
+      width: 270
+    },
+    productName: 'Mercedes gt 63 s',
+    productDescription:
+      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
+  },
+  {
+    firstName: 'Viezh',
+    secondName: 'Robert',
+    nickname: 'Andreyko235',
+    profileImage: {
+      src: '/static/images/Avatar175.png',
+      alt: 'AvatarImage',
+      height: 50,
+      width: 50
+    },
+    productImage: {
+      src: '/static/images/productImgae.png',
+      alt: 'ProductImage',
+      height: 220,
+      width: 270
+    },
+    productName: 'Mercedes gt 63 s',
+    productDescription:
+      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
+  },
+  {
+    firstName: 'Viezh',
+    secondName: 'Robert',
+    nickname: 'Andreyko235',
+    profileImage: {
+      src: '/static/images/Avatar175.png',
+      alt: 'AvatarImage',
+      height: 50,
+      width: 50
+    },
+    productImage: {
+      src: '/static/images/productImgae.png',
+      alt: 'ProductImage',
+      height: 220,
+      width: 270
+    },
+    productName: 'Mercedes gt 63 s',
+    productDescription:
+      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
+  },
+  {
+    firstName: 'Viezh',
+    secondName: 'Robert',
+    nickname: 'Andreyko235',
+    profileImage: {
+      src: '/static/images/Avatar175.png',
+      alt: 'AvatarImage',
+      height: 50,
+      width: 50
+    },
+    productImage: {
+      src: '/static/images/productImgae.png',
+      alt: 'ProductImage',
+      height: 220,
+      width: 270
+    },
+    productName: 'Mercedes gt 63 s',
+    productDescription:
+      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
+  },
+  {
+    firstName: 'Viezh',
+    secondName: 'Robert',
+    nickname: 'Andreyko235',
+    profileImage: {
+      src: '/static/images/Avatar175.png',
+      alt: 'AvatarImage',
+      height: 50,
+      width: 50
+    },
+    productImage: {
+      src: '/static/images/productImgae.png',
+      alt: 'ProductImage',
+      height: 220,
+      width: 270
+    },
+    productName: 'Mercedes gt 63 s',
+    productDescription:
+      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
+  },
+  {
+    firstName: 'Viezh',
+    secondName: 'Robert',
+    nickname: 'Andreyko235',
+    profileImage: {
+      src: '/static/images/Avatar175.png',
+      alt: 'AvatarImage',
+      height: 50,
+      width: 50
+    },
+    productImage: {
+      src: '/static/images/productImgae.png',
+      alt: 'ProductImage',
+      height: 220,
+      width: 270
+    },
+    productName: 'Mercedes gt 63 s',
+    productDescription:
+      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
+  },
+  {
+    firstName: 'Viezh',
+    secondName: 'Robert',
+    nickname: 'Andreyko235',
+    profileImage: {
+      src: '/static/images/Avatar175.png',
+      alt: 'AvatarImage',
+      height: 50,
+      width: 50
+    },
+    productImage: {
+      src: '/static/images/productImgae.png',
+      alt: 'ProductImage',
+      height: 220,
+      width: 270
+    },
+    productName: 'Mercedes gt 63 s',
+    productDescription:
+      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
+  },
+  {
+    firstName: 'Viezh',
+    secondName: 'Robert',
+    nickname: 'Andreyko235',
+    profileImage: {
+      src: '/static/images/Avatar175.png',
+      alt: 'AvatarImage',
+      height: 50,
+      width: 50
+    },
+    productImage: {
+      src: '/static/images/productImgae.png',
+      alt: 'ProductImage',
+      height: 220,
+      width: 270
+    },
+    productName: 'Mercedes gt 63 s',
+    productDescription:
+      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
+  },
+  {
+    firstName: 'Viezh',
+    secondName: 'Robert',
+    nickname: 'Andreyko235',
+    profileImage: {
+      src: '/static/images/Avatar175.png',
+      alt: 'AvatarImage',
+      height: 50,
+      width: 50
+    },
+    productImage: {
+      src: '/static/images/productImgae.png',
+      alt: 'ProductImage',
+      height: 220,
+      width: 270
+    },
+    productName: 'Mercedes gt 63 s',
+    productDescription:
+      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
+  },
+  {
+    firstName: 'Viezh',
+    secondName: 'Robert',
+    nickname: 'Andreyko235',
+    profileImage: {
+      src: '/static/images/Avatar175.png',
+      alt: 'AvatarImage',
+      height: 50,
+      width: 50
+    },
+    productImage: {
+      src: '/static/images/productImgae.png',
+      alt: 'ProductImage',
+      height: 220,
+      width: 270
+    },
+    productName: 'Mercedes gt 63 s',
+    productDescription:
+      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
+  },
+  {
+    firstName: 'Viezh',
+    secondName: 'Robert',
+    nickname: 'Andreyko235',
+    profileImage: {
+      src: '/static/images/Avatar175.png',
+      alt: 'AvatarImage',
+      height: 50,
+      width: 50
+    },
+    productImage: {
+      src: '/static/images/productImgae.png',
+      alt: 'ProductImage',
+      height: 220,
+      width: 270
+    },
+    productName: 'Mercedes gt 63 s',
+    productDescription:
+      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
   }
 ];

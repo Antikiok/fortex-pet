@@ -4,15 +4,17 @@ import ProductGalleryItem from './ProductGalleryItem';
 import LeftArrow from 'assets/icons/Arrows/LeftArrow';
 import RightArrow from 'assets/icons/Arrows/RightArrow';
 import dynamic from 'next/dynamic';
+import LeftArrowBtn from 'components/ToglleGalery/LeftArrowBtn';
+import RightArrowBtn from 'components/ToglleGalery/RightArrowBtn';
 
 const ProductGalleryCircleDynamic = dynamic(
-  () => import('./ProductGalleryCircle'),
+  () => import('components/ProductGalleryCircle'),
   {
     ssr: false
   }
 );
 
-const ProductGallery = ({ arrToRender }: any) => {
+const ProductGallery = ({ arrToRender, heading }: any) => {
   const [page, setPage] = useState(0);
 
   const itemOnPage = 3;
@@ -21,35 +23,12 @@ const ProductGallery = ({ arrToRender }: any) => {
 
   const totalPages = Math.ceil(arrToRender.length / itemOnPage);
 
-  const sliceData = (totalPages: any, currentPage: any) => {
-    let firstIndex = 0;
-    currentPage > 2 ? (firstIndex = currentPage - 3) : (firstIndex = 0);
-
-    [Array(totalPages).slice(firstIndex, currentPage)];
-  };
-
-  // console.log(sliceData(totalPages, page));
-
-  const decreasePage = useCallback(() => {
-    if (page > 0) {
-      setPage((prev) => prev - 1);
-    }
-  }, [page]);
-
-  const increasePage = useCallback(() => {
-    if (page < totalPages - 1) {
-      setPage((prev) => prev + 1);
-    }
-  }, [page]);
-
   return (
     <>
       <div className="product_gallery">
-        <div className="product_gallery-heading">Самые дешевые аукционы</div>
+        <div className="product_gallery-heading">{heading}</div>
         <div className="product_gallery-carousel">
-          <button className="product_gallery-btn" onClick={decreasePage}>
-            <LeftArrow />
-          </button>
+          <LeftArrowBtn page={page} setPage={setPage} />
           {arrToRender.slice(firstIndex, lastIndex).map((product: any) => (
             <ProductGalleryItem
               image={product.image}
@@ -59,13 +38,11 @@ const ProductGallery = ({ arrToRender }: any) => {
               key={product.article}
             />
           ))}
-          <button
-            className="product_gallery-btn"
-            onClick={increasePage}
-            style={{ position: 'absolute', right: 0 }}
-          >
-            <RightArrow />
-          </button>
+          <RightArrowBtn
+            page={page}
+            setPage={setPage}
+            totalPages={totalPages}
+          />
         </div>
       </div>
       <ProductGalleryCircleDynamic

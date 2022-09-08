@@ -1,0 +1,47 @@
+.winners_gallery {
+  &-heading {
+  }
+  &-carousel {
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+    position: relative;
+  }
+  &-cells {
+    padding: 25px;
+    width: 320px;
+    background: #181818;
+    border-radius: 5px;
+    margin: 0 25px;
+  }
+  &-profile {
+    display: flex;
+  }
+  &-personal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15px;
+  }
+  &-fullname {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  &-nickname {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 30px;
+  }
+  &-image {
+    margin: 15px 0;
+  }
+  &-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+  }
+  &-description {
+    margin: 15px 0;
+  }
+}
