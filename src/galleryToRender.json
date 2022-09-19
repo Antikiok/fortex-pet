@@ -1,0 +1,244 @@
+[
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 1",
+    "countBiletos": "19/100",
+    "article": "Art:000669"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 2",
+    "countBiletos": "19/100",
+    "article": "Art:000690"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 3",
+    "countBiletos": "19/100",
+    "article": "Art:000612"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 4",
+    "countBiletos": "19/100",
+    "article": "Art:000632"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 5",
+    "countBiletos": "19/100",
+    "article": "Art:000687"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 6",
+    "countBiletos": "19/100",
+    "article": "Art:000617"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 7",
+    "countBiletos": "19/100",
+    "article": "Art:000643"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 8",
+    "countBiletos": "19/100",
+    "article": "Art:000123"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 9",
+    "countBiletos": "19/100",
+    "article": "Art:000124"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 10",
+    "countBiletos": "19/100",
+    "article": "Art:000135"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 11",
+    "countBiletos": "19/100",
+    "article": "Art:000148"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 12",
+    "countBiletos": "19/100",
+    "article": "Art:000149"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 13",
+    "countBiletos": "19/100",
+    "article": "Art:000151"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 14",
+    "countBiletos": "19/100",
+    "article": "Art:000153"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 15",
+    "countBiletos": "19/100",
+    "article": "Art:000155"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 16",
+    "countBiletos": "19/100",
+    "article": "Art:000156"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 17",
+    "countBiletos": "19/100",
+    "article": "Art:000157"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 18",
+    "countBiletos": "19/100",
+    "article": "Art:000162"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 19",
+    "countBiletos": "19/100",
+    "article": "Art:000163"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 20",
+    "countBiletos": "19/100",
+    "article": "Art:000165"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 21",
+    "countBiletos": "19/100",
+    "article": "Art:000167"
+  },
+  {
+    "image": {
+      "src": "/static/images/productImgae.png",
+      "alt": "ProductImage",
+      "height": 220,
+      "width": 270
+    },
+    "productName": "Товар 22",
+    "countBiletos": "19/100",
+    "article": "Art:000168"
+  }
+]

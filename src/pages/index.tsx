@@ -14,8 +14,6 @@ import styles from '../styles/Home.module.css';
 const Home: NextPage = () => {
   const router = useRouter();
 
-  // console.log(totalPages);
-
   const startPlay = useCallback(
     (e: React.SyntheticEvent<HTMLButtonElement>): void => {
       e.preventDefault();
