@@ -1,11 +1,7 @@
-import { memo } from 'react';
+import React from 'react';
 
 const Cars = () => {
-  return (
-    <>
-      <div>Cars Page</div>
-    </>
-  );
+  return <div>Cars</div>;
 };
 
-export default memo(Cars);
+export default Cars;

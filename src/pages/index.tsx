@@ -1,6 +1,7 @@
 import Dollar from 'assets/icons/Dollar';
 import FingerUp from 'assets/icons/FingerUp';
 import Profit from 'assets/icons/Profit';
+import axios from 'axios';
 
 import NavigateBtn from 'components/NavigateBtn';
 import ProductGallery from 'components/ProductGallery';
@@ -11,9 +12,11 @@ import { useRouter } from 'next/router';
 import { useCallback, useState } from 'react';
 import styles from '../styles/Home.module.css';
 
-const Home: NextPage = () => {
-  const router = useRouter();
+interface IHome {
+  tovariToRender: string[];
+}
 
+const Home = ({ tovariToRender }: IHome) => {
   const startPlay = useCallback(
     (e: React.SyntheticEvent<HTMLButtonElement>): void => {
       e.preventDefault();
@@ -103,18 +106,18 @@ const Home: NextPage = () => {
       </div>
       <div className="home_gallery">
         <ProductGallery
-          arrToRender={galleryToRender}
+          tovariToRender={tovariToRender}
           heading="Самые дешевые аукционы"
         />
       </div>
 
-      <div className="home_winners">
-        <WinnersGallery arrToRender={winnersToRender} />
-      </div>
+      {/* <div className="home_winners">
+        <WinnersGallery arrToRender={winnersToRender.data} />
+      </div> */}
 
       <div className="home_gallery">
         <ProductGallery
-          arrToRender={galleryToRender}
+          tovariToRender={tovariToRender}
           heading="Популярные аукционы"
         />
       </div>
@@ -122,472 +125,17 @@ const Home: NextPage = () => {
   );
 };
 
+export const getStaticProps = async () => {
+  const res = await fetch('http://localhost:3000/api/tovari');
+  const tovari = await res.json();
+  // const winners = await axios.get('http://localhost:3000/api/winners');
+
+  return {
+    props: {
+      tovariToRender: tovari.data || []
+      // winnersToRender: winners.data || [],
+    }
+  };
+};
+
 export default Home;
-
-const galleryToRender = [
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 1',
-    countBiletos: '19/100',
-    article: 'Art:000669'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 2',
-    countBiletos: '19/100',
-    article: 'Art:000690'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 3',
-    countBiletos: '19/100',
-    article: 'Art:000612'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 4',
-    countBiletos: '19/100',
-    article: 'Art:000632'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 5',
-    countBiletos: '19/100',
-    article: 'Art:000687'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 6',
-    countBiletos: '19/100',
-    article: 'Art:000617'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 7',
-    countBiletos: '19/100',
-    article: 'Art:000643'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 8',
-    countBiletos: '19/100',
-    article: 'Art:000123'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 9',
-    countBiletos: '19/100',
-    article: 'Art:000124'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 10',
-    countBiletos: '19/100',
-    article: 'Art:000135'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 11',
-    countBiletos: '19/100',
-    article: 'Art:000148'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 12',
-    countBiletos: '19/100',
-    article: 'Art:000149'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 13',
-    countBiletos: '19/100',
-    article: 'Art:000151'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 14',
-    countBiletos: '19/100',
-    article: 'Art:000153'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 15',
-    countBiletos: '19/100',
-    article: 'Art:000155'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 16',
-    countBiletos: '19/100',
-    article: 'Art:000156'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 17',
-    countBiletos: '19/100',
-    article: 'Art:000157'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 18',
-    countBiletos: '19/100',
-    article: 'Art:000162'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 19',
-    countBiletos: '19/100',
-    article: 'Art:000163'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 20',
-    countBiletos: '19/100',
-    article: 'Art:000165'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 21',
-    countBiletos: '19/100',
-    article: 'Art:000167'
-  },
-  {
-    image: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Товар 22',
-    countBiletos: '19/100',
-    article: 'Art:000168'
-  }
-];
-
-const winnersToRender = [
-  {
-    firstName: 'Viezh',
-    secondName: 'Robert',
-    nickname: 'Andreyko235',
-    profileImage: {
-      src: '/static/images/Avatar175.png',
-      alt: 'AvatarImage',
-      height: 50,
-      width: 50
-    },
-    productImage: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Mercedes gt 63 s',
-    productDescription:
-      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
-  },
-  {
-    firstName: 'Viezh',
-    secondName: 'Robert',
-    nickname: 'Andreyko235',
-    profileImage: {
-      src: '/static/images/Avatar175.png',
-      alt: 'AvatarImage',
-      height: 50,
-      width: 50
-    },
-    productImage: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Mercedes gt 63 s',
-    productDescription:
-      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
-  },
-  {
-    firstName: 'Viezh',
-    secondName: 'Robert',
-    nickname: 'Andreyko235',
-    profileImage: {
-      src: '/static/images/Avatar175.png',
-      alt: 'AvatarImage',
-      height: 50,
-      width: 50
-    },
-    productImage: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Mercedes gt 63 s',
-    productDescription:
-      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
-  },
-  {
-    firstName: 'Viezh',
-    secondName: 'Robert',
-    nickname: 'Andreyko235',
-    profileImage: {
-      src: '/static/images/Avatar175.png',
-      alt: 'AvatarImage',
-      height: 50,
-      width: 50
-    },
-    productImage: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Mercedes gt 63 s',
-    productDescription:
-      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
-  },
-  {
-    firstName: 'Viezh',
-    secondName: 'Robert',
-    nickname: 'Andreyko235',
-    profileImage: {
-      src: '/static/images/Avatar175.png',
-      alt: 'AvatarImage',
-      height: 50,
-      width: 50
-    },
-    productImage: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Mercedes gt 63 s',
-    productDescription:
-      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
-  },
-  {
-    firstName: 'Viezh',
-    secondName: 'Robert',
-    nickname: 'Andreyko235',
-    profileImage: {
-      src: '/static/images/Avatar175.png',
-      alt: 'AvatarImage',
-      height: 50,
-      width: 50
-    },
-    productImage: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Mercedes gt 63 s',
-    productDescription:
-      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
-  },
-  {
-    firstName: 'Viezh',
-    secondName: 'Robert',
-    nickname: 'Andreyko235',
-    profileImage: {
-      src: '/static/images/Avatar175.png',
-      alt: 'AvatarImage',
-      height: 50,
-      width: 50
-    },
-    productImage: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Mercedes gt 63 s',
-    productDescription:
-      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
-  },
-  {
-    firstName: 'Viezh',
-    secondName: 'Robert',
-    nickname: 'Andreyko235',
-    profileImage: {
-      src: '/static/images/Avatar175.png',
-      alt: 'AvatarImage',
-      height: 50,
-      width: 50
-    },
-    productImage: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Mercedes gt 63 s',
-    productDescription:
-      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
-  },
-  {
-    firstName: 'Viezh',
-    secondName: 'Robert',
-    nickname: 'Andreyko235',
-    profileImage: {
-      src: '/static/images/Avatar175.png',
-      alt: 'AvatarImage',
-      height: 50,
-      width: 50
-    },
-    productImage: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Mercedes gt 63 s',
-    productDescription:
-      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
-  },
-  {
-    firstName: 'Viezh',
-    secondName: 'Robert',
-    nickname: 'Andreyko235',
-    profileImage: {
-      src: '/static/images/Avatar175.png',
-      alt: 'AvatarImage',
-      height: 50,
-      width: 50
-    },
-    productImage: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Mercedes gt 63 s',
-    productDescription:
-      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
-  },
-  {
-    firstName: 'Viezh',
-    secondName: 'Robert',
-    nickname: 'Andreyko235',
-    profileImage: {
-      src: '/static/images/Avatar175.png',
-      alt: 'AvatarImage',
-      height: 50,
-      width: 50
-    },
-    productImage: {
-      src: '/static/images/productImgae.png',
-      alt: 'ProductImage',
-      height: 220,
-      width: 270
-    },
-    productName: 'Mercedes gt 63 s',
-    productDescription:
-      'Expectations and so far there have been no problems. expectations and so far the best of what? Expectations and so far there have been.'
-  }
-];

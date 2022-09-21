@@ -1,5 +1,4 @@
 import { IGetData, IPostData } from 'interfaces/api.interface';
-
 import clientConnect from 'utils/connectDb';
 
 export default async function handler(req: IPostData, res: IGetData) {
@@ -8,11 +7,11 @@ export default async function handler(req: IPostData, res: IGetData) {
   switch (req.method) {
     case 'POST':
       const bodyObject = JSON.parse(req.body);
-      const winners = await db.collection('winners').insertOne(bodyObject);
+      const tovar = await db.collection('tovari').insertOne(bodyObject);
       break;
 
     case 'GET':
-      const allWinners = await db.collection('winners').find({}).toArray();
-      return res.json({ status: 200, data: allWinners });
+      const allTovari = await db.collection('tovari').find({}).toArray();
+      return res.json({ status: 200, data: allTovari });
   }
 }

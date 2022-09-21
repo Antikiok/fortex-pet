@@ -27,52 +27,50 @@ const WinnersGallery = ({ arrToRender }: any) => {
         <div className="winners_gallery-carousel">
           <LeftArrowBtn page={page} setPage={setPage} />
 
-          {arrToRender
-            .slice(firstIndex, lastIndex)
-            .map((winner: any, index: number) => (
-              <div className="winners_gallery-cells" key={index}>
-                <div className="winners_gallery-profile">
-                  <div className="winners_gallery-avatar">
-                    <Image
-                      src={winner.profileImage.src}
-                      height={winner.profileImage.height}
-                      width={winner.profileImage.width}
-                      alt={winner.profileImage.alt}
-                    />
-                  </div>
-                  <div className="winners_gallery-personal">
-                    <div className="winners_gallery-fullname">
-                      {`${winner.firstName} ${winner.secondName}`}
-                    </div>
-                    <div className="winners_gallery-nickname">
-                      {winner.nickname}
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="winners_gallery-image"
-                  style={{
-                    height: winner.productImage.height,
-                    width: winner.productImage.width
-                  }}
-                >
+          {arrToRender.slice(firstIndex, lastIndex).map((winner: any) => (
+            <div className="winners_gallery-cells" key={winner._id}>
+              <div className="winners_gallery-profile">
+                <div className="winners_gallery-avatar">
                   <Image
-                    src={winner.productImage.src}
-                    alt={winner.productImage.alt}
-                    height={winner.productImage.height}
-                    width={winner.productImage.width}
+                    src={winner.profileImage.src}
+                    height={winner.profileImage.height}
+                    width={winner.profileImage.width}
+                    alt={winner.profileImage.alt}
                   />
                 </div>
-                <div className="winners_gallery-content">
-                  <div className="winners_gallery-title">
-                    {winner.productName}
+                <div className="winners_gallery-personal">
+                  <div className="winners_gallery-fullname">
+                    {`${winner.firstName} ${winner.secondName}`}
                   </div>
-                  <div className="winners_gallery-description">
-                    {winner.productDescription}
+                  <div className="winners_gallery-nickname">
+                    {winner.nickname}
                   </div>
                 </div>
               </div>
-            ))}
+              <div
+                className="winners_gallery-image"
+                style={{
+                  height: winner.productImage.height,
+                  width: winner.productImage.width
+                }}
+              >
+                <Image
+                  src={winner.productImage.src}
+                  alt={winner.productImage.alt}
+                  height={winner.productImage.height}
+                  width={winner.productImage.width}
+                />
+              </div>
+              <div className="winners_gallery-content">
+                <div className="winners_gallery-title">
+                  {winner.productName}
+                </div>
+                <div className="winners_gallery-description">
+                  {winner.productDescription}
+                </div>
+              </div>
+            </div>
+          ))}
 
           <RightArrowBtn
             page={page}

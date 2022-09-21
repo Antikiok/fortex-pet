@@ -1,14 +1,15 @@
 import '../styles/index.scss';
 
 import type { AppProps } from 'next/app';
-import Layout from '../components/Layout';
+import Layout from 'components/Layout';
+import React from 'react';
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <React.Suspense fallback="loading...">
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </React.Suspense>
   );
 }
-
-export default MyApp;

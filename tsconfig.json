@@ -17,7 +17,7 @@
     "baseUrl": "./src/"
   },
 
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.scss"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.scss", "src/utils/connectDb.js", "src/utils/connectDb.js", "src/components/ProductGallery/index.jsx", "src/pages/api/tovari.ts", "src/pages/api/winners.js"],
   "exclude": ["node_modules"],
   "files": ["custom.d.ts"]
 }
