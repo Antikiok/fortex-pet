@@ -14,9 +14,10 @@ import styles from '../styles/Home.module.css';
 
 interface IHome {
   tovariToRender: string[];
+  winnersToRender: string[];
 }
 
-const Home = ({ tovariToRender }: IHome) => {
+const Home = ({ tovariToRender, winnersToRender }: IHome) => {
   const startPlay = useCallback(
     (e: React.SyntheticEvent<HTMLButtonElement>): void => {
       e.preventDefault();
@@ -111,9 +112,9 @@ const Home = ({ tovariToRender }: IHome) => {
         />
       </div>
 
-      {/* <div className="home_winners">
+      <div className="home_winners">
         <WinnersGallery arrToRender={winnersToRender.data} />
-      </div> */}
+      </div>
 
       <div className="home_gallery">
         <ProductGallery
@@ -128,12 +129,13 @@ const Home = ({ tovariToRender }: IHome) => {
 export const getStaticProps = async () => {
   const res = await fetch('http://localhost:3000/api/tovari');
   const tovari = await res.json();
-  // const winners = await axios.get('http://localhost:3000/api/winners');
+  const winners = await axios.get('http://localhost:3000/api/winners');
 
   return {
     props: {
-      tovariToRender: tovari.data || []
-      // winnersToRender: winners.data || [],
+      tovariToRender: tovari.data || [],
+      winnersToRender: winners.data || [],
+      fallback: false
     }
   };
 };
